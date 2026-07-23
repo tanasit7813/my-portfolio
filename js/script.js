@@ -222,3 +222,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function toggleMobileMenu() {
+  const menu = document.getElementById("mobile-menu");
+
+  if (menu.classList.contains("opacity-0")) {
+    menu.classList.remove("opacity-0", "scale-95", "pointer-events-none");
+    menu.classList.add("opacity-100", "scale-100");
+  } else {
+    closeMobileMenu();
+  }
+}
+
+function closeMobileMenu() {
+  const menu = document.getElementById("mobile-menu");
+  menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+  menu.classList.remove("opacity-100", "scale-100");
+}

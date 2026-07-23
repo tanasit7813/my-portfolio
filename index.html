@@ -32,34 +32,97 @@
           >Tanasit Autrachai</a
         >
       </div>
-      <div class="flex-none px-4 lg:px-8 flex gap-2">
-        <button
-          onclick="switchPage('home')"
-          class="btn btn-ghost rounded-xl text-lg font-bold"
-          data-i18n="nav.home"
-        >
-          Home
-        </button>
-        <button
-          onclick="switchPage('about')"
-          class="btn btn-ghost rounded-xl text-lg font-bold"
-          data-i18n="nav.about"
-        >
-          About
-        </button>
-        <button
-          onclick="switchPage('portfolio')"
-          class="btn btn-ghost rounded-xl text-lg font-bold"
-          data-i18n="nav.portfolio"
-        >
-          Portfolio
-        </button>
+      <div class="flex-none px-4 lg:px-8 flex items-center gap-1">
+        <!-- เมนูแนวนอน: จะแสดงเฉพาะหน้าจอขนาดกลางขึ้นไป (ซ่อนในมือถือด้วยคลาส hidden md:flex) -->
+        <div class="hidden md:flex gap-2">
+          <button
+            onclick="switchPage('home')"
+            class="btn btn-ghost rounded-xl text-lg font-bold"
+            data-i18n="nav.home"
+          >
+            Home
+          </button>
+          <button
+            onclick="switchPage('about')"
+            class="btn btn-ghost rounded-xl text-lg font-bold"
+            data-i18n="nav.about"
+          >
+            About
+          </button>
+          <button
+            onclick="switchPage('portfolio')"
+            class="btn btn-ghost rounded-xl text-lg font-bold"
+            data-i18n="nav.portfolio"
+          >
+            Portfolio
+          </button>
+        </div>
 
+        <!-- ปุ่มเปลี่ยนภาษา: วางไว้ตรงนี้เพื่อให้แสดงผลตลอดเวลา ทั้งในมือถือและจอคอม -->
         <button
           id="btn-lang"
           onclick="toggleLanguage()"
-          class="btn btn-sm btn-outline rounded-full ml-4 flex items-center gap-2"
+          class="btn btn-sm btn-outline rounded-full ml-2 flex items-center gap-2"
         ></button>
+
+        <!-- ปุ่ม Drop-down: จะแสดงเฉพาะมือถือ -->
+        <div class="relative md:hidden ml-2">
+          <button onclick="toggleMobileMenu()" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </button>
+
+          <ul
+            id="mobile-menu"
+            class="menu menu-sm absolute right-0 mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-48 transition-all duration-300 ease-out origin-top-right opacity-0 scale-95 pointer-events-none"
+          >
+            <li>
+              <a
+                onclick="
+                  closeMobileMenu();
+                  switchPage('home');
+                "
+                class="font-bold text-base py-3"
+                data-i18n="nav.home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="
+                  closeMobileMenu();
+                  switchPage('about');
+                "
+                class="font-bold text-base py-3"
+                data-i18n="nav.about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="
+                  closeMobileMenu();
+                  switchPage('portfolio');
+                "
+                class="font-bold text-base py-3"
+                data-i18n="nav.portfolio"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -98,6 +161,7 @@
             ></div>
           </div>
         </section>
+
         <div
           class="w-full h-px bg-gradient-to-r from-transparent via-gray-500/30 to-transparent"
         ></div>
