@@ -11,5 +11,4 @@ Features a clean UI and interactive project.
 
 ## Disclaimer
 > [!IMPORTANT]
-> **Disclaimer:**  
 > This repository is created solely for personal portfolio demonstration and skill showcase purposes. It is strictly non-commercial and not intended for commercial monetization or public service distribution.
