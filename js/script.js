@@ -116,10 +116,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // เริ่มต้นด้วยการเรียกฟังก์ชันโหลดไฟล์ JSON
   loadTranslations(initialLang);
+
+  // เช็คหน้าปัจจุบันจาก URL Hash (เช่น #about, #portfolio) ถ้าไม่มีให้เป็น 'home'
+  const validPages = ["home", "about", "portfolio"];
+  const currentHash = window.location.hash.replace("#", "");
+  const initialPage = validPages.includes(currentHash) ? currentHash : "home";
+
+  switchPage(initialPage, false);
 });
 
 // ฟังก์ชันสลับหน้าเว็บ (SPA)
-function switchPage(targetPageId) {
+function switchPage(targetPageId, updateHash = true) {
+  const targetPage = document.getElementById("page-" + targetPageId);
+  if (!targetPage) return;
+
   const allPages = document.querySelectorAll(".spa-page");
   allPages.forEach((page) => {
     // ซ่อนหน้า
@@ -139,9 +149,12 @@ function switchPage(targetPageId) {
   });
 
   // 2. แสดงเฉพาะหน้าที่เลือก
-  const targetPage = document.getElementById("page-" + targetPageId);
   targetPage.classList.remove("hidden");
   targetPage.classList.add("block");
+
+  if (updateHash) {
+    history.pushState(null, "", "#" + targetPageId);
+  }
 
   window.scrollTo(0, 0);
 
@@ -155,6 +168,14 @@ function switchPage(targetPageId) {
     });
   }, 50);
 }
+
+// รองรับการกดปุ่ม ย้อนกลับ/ถัดไป (Back/Forward) ของเบราว์เซอร์
+window.addEventListener("popstate", () => {
+  const validPages = ["home", "about", "portfolio"];
+  const currentHash = window.location.hash.replace("#", "");
+  const targetPage = validPages.includes(currentHash) ? currentHash : "home";
+  switchPage(targetPage, false);
+});
 
 function updateActiveDot(carouselId, activeIndex) {
   const dotsContainer = document.getElementById("dots-" + carouselId);
