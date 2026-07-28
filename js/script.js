@@ -207,7 +207,7 @@ function jumpToSlide(carouselId, slideIndex) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // ลิสต์ ID ของ Carousel ทั้งหมดในหน้าเว็บ
-  const carousels = ["carousel-proj1", "carousel-proj2"];
+  const carousels = ["carousel-proj1", "carousel-proj2", "carousel-proj3"];
 
   carousels.forEach((id) => {
     const carousel = document.getElementById(id);
