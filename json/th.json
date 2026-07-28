@@ -23,8 +23,10 @@
     "about-page-language-en": "อังกฤษ: ปานกลาง",
     "portfolio-page-duration": "ระยะเวลา: พฤษภาคม 2025 - ตุลาคม 2025 (5 เดือน)",
     "portfolio-page-duration-2": "ระยะเวลา: 21 กรกฎาคม 2026 - 23 กรกฎาคม 2026 (3 วัน)",
+    "portfolio-page-duration-3": "ระยะเวลา: 25 กรกฎาคม 2026 - 28 กรกฎาคม 2026 (4 วัน)",
     "portfolio-page-project-1-description": "พัฒนาระบบ LO-Wallet (Learning Outcome Wallet) ให้กับมหาวิทยาลัยราชภัฏภูเก็ต ซึ่งเป็นเว็บแอปพลิเคชันแบบกำหนดสิทธิ์ผู้ใช้งาน (Role-based) ประกอบด้วยระบบจัดการคอร์สเรียนและระบบลงทะเบียน การประเมินผลลัพธ์การเรียนรู้ และระบบออกใบรับรอง (e-Certificate) อัตโนมัติ เพื่อเพิ่มโอกาสในการสมัครงานของนักศึกษา",
-    "portfolio-page-project-2-description": "เว็บไซต์แฟ้มสะสมผลงานส่วนตัว เพื่อแสดงผลงานและทักษะของฉัน"
+    "portfolio-page-project-2-description": "เว็บไซต์แฟ้มสะสมผลงานส่วนตัว เพื่อแสดงผลงานและทักษะของฉัน",
+    "portfolio-page-project-3-description": "เว็บแอปพลิเคชันดีไซน์ทันสมัยสำหรับบันทึกและวิเคราะห์ประวัติการสุ่มกาชา (Gacha Pull History, Pity Counter) และสถิติสำหรับเกมในเครือ HoYoverse (Genshin Impact, Honkai: Star Rail และ Zenless Zone Zero) พัฒนาด้วย Next.js, React, Tailwind CSS และ Supabase"
   },
   "header": {
     "about-page": "เกี่ยวกับฉัน",
@@ -34,7 +36,8 @@
     "about-page-hard-skills": "ทักษะทางเทคนิค",
     "portfolio-page": "แฟ้มสะสมผลงาน",
     "portfolio-page-project-1": "ระบบบันทึกผลลัพธ์การเรียนรู้จากการฝึกอบรมของสำนักวิทยบริการและเทคโนโลยีสารสนเทศมหาวิทยาลัยราชภัฏภูเก็ต (LO Wallet)",
-    "portfolio-page-project-2": "เว็บไซต์เก็บผลงานของตัวฉัน"
+    "portfolio-page-project-2": "เว็บไซต์เก็บผลงานของตัวฉัน",
+    "portfolio-page-project-3": "เว็บเก็บประวัติการกดกาชาเกม"
   },
   "btn": {
     "about": "ประวัติ",
